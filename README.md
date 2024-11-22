@@ -104,7 +104,7 @@ project_folder/
      | Ato (atonal)    | 12345   | 
      | Ato (atonal)    | 123456  |
 
-   - In some cases the gene name can be used for Gene ID (especially for Drosophila Melongaster), but we recommend using the Gene  ID from the NCBI database to avoid erros
+   - In some cases the gene name can be used for Gene ID (especially for Drosophila Melongaster), but we recommend using the Gene  ID from the NCBI database to avoid errors.
    -  Ensure the sheet name in the Excel file is set correctly. In this example, the sheet name is `Gene_names_ids`. If you use a different sheet name, update the code accordingly.
 
 2. **Organize Input Files**:
