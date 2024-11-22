@@ -1,6 +1,6 @@
 # **Cross-Species BLASTp Analysis**
 
-This repository contains the code to perform BLASTp analysis across multiple species for gene-specific datasets. The project automates querying each species against others using protein FASTA sequences, generating results in a CSV format for cross-species comparisons. Thisis designed to replace the manual use of the BLAST software, enabling faster and automated analyses for multiple genes.
+This repository contains the code to perform BLASTp analysis across multiple species for gene-specific datasets. The project automates querying each species against others using protein FASTA sequences, generating results in a CSV format for cross-species comparisons. This is designed to replace the manual use of the BLAST software, enabling faster and automated analyses for multiple genes.
 
 ---
 
@@ -8,7 +8,9 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 
 1. [Overview](#overview)  
 2. [Setup Instructions](#setup-instructions)  
-3. [Usage](#usage)
+3. [Usage](#usage)  
+4. [Output Explanation](#output-explanation)  
+
 ---
 
 ## **Overview**
@@ -17,18 +19,16 @@ This project automates BLASTp (Protein BLAST) comparisons for genes across multi
 - Check if the genes to be analysed are available on the NCBI database.
 - Process protein FASTA files from a specified directory.
 - Create BLASTp databases dynamically from the FASTA files.
-- Perform BLASTp queries for each species against others in the dataset.
+- Perform BLASTp using the inputted species as the query and comparing it against all other species. 
 - Generate CSV files summarizing results, including alignment statistics such as percentage identity, bit score, and alignment length.
 
 The primary objective is to streamline and automate the process of comparing gene homologs across species, ensuring a reproducible and scalable pipeline.
 
 ---
 
----
-
 ## **Setup Instructions**
 
-### Prerequisites
+### **Prerequisites**
 
 1. **Required Libraries**: Ensure the following Python libraries are installed:
    - `os` (standard library, no installation required)
@@ -76,91 +76,91 @@ project_folder/
 ├── BLAST_Analysis.ipynb     # Jupyter notebook for running the analysis
 ```
 
-## **Usage**
-
-### Step 1: Run the Setup Verification in Jupyter Notebook
-
-1. Open the Jupyter notebook (`BLAST_Analysis.ipynb`) in your preferred environment (e.g., JupyterLab, Jupyter Notebook).
-
-2. Locate the first cell titled **"Verify Required Libraries and BLAST Installation"**.
-
-3. Run the cell to verify:
-   - All required Python libraries (`pandas`, `Bio`, etc.) are installed.
-   - BLAST+ (`ncbi-blast-2.16.0+`) is properly set up in the project folder.
-
-### Expected Output:
-- If all dependencies and BLAST are available:
-
 ---
 
-### Step 2: Prepare Input Data
+## **Usage**
+
+### **Step 1: Prepare Input Data**
 1. **Input File Format**:
    - The input files must be in **Excel** format. CSV files can also be used, but the Pandas `read_excel` function in the code must be adjusted to `read_csv` accordingly.
    - Update the file name in the code to match your input file. In this example, we used `Dros_gene_names_full.xlsx`.
    - Each Excel file should contain gene-specific data, formatted as follows:
 
-     | Gene Name       | Gene ID |
-     |------------------|---------|
-     | Ato (atonal)    | 12345   | 
-     | Ato (atonal)    | 123456  |
+     | Gene Name       | Gene ID | Species       |
+     |------------------|---------|---------------|
+     | Ato (atonal)    | 12345   | Drosophila_X  |
+     | Ank2 (Ankyrin)  | 67890   | Drosophila_Y  |
 
-   - In some cases the gene name can be used for Gene ID (especially for Drosophila Melongaster), but we recommend using the Gene  ID from the NCBI database to avoid errors.
-   -  Ensure the sheet name in the Excel file is set correctly. In this example, the sheet name is `Gene_names_ids`. If you use a different sheet name, update the code accordingly.
+   - In some cases, the gene name can be used for the Gene ID (especially for *Drosophila melanogaster*), but we recommend using the Gene ID from the NCBI database to avoid errors.
+   - Ensure the sheet name in the Excel file is set correctly. In this example, the sheet name is `Gene_names_ids`. If you use a different sheet name, update the code accordingly.
 
 2. **Organize Input Files**:
    - Place your Excel file in the same folder as the Jupyter notebook to ensure they are accessible during execution.
 
 ---
 
-### Step 3: Run the Script
-1. **Execute the Notebook**:
-   - Open the Jupyter notebook in your preferred environment (e.g., JupyterLab, Jupyter Notebook).
-   - Update any file paths in the code to match your input files.
-   - Run the notebook cells sequentially to process the input data, create BLAST databases, and perform BLASTp comparisons.
+### **Step 2: Run the Script**
 
-2. **What the Notebook Does**:
-   - Reads the gene names and IDs from the specified Excel file.
-   - Downloads the FASTA files from NCBI according to each species.
-   - Dynamically generates BLASTp databases.
-   - Runs BLASTp queries for each gene and species, saving the results.
+#### **1. Verifying All Libraries**  
+- This cell just verifies that all libraries needed are installed and working properly.
+
+#### **2. Checking That Gene IDs Are Correct**  
+- Reads the gene names and IDs from the specified Excel file and checks if they exist on the NCBI site.
+- If there are any that are not found, they are printed. This is useful for debugging since the download code takes a long time.
+
+#### **3. Downloading the FASTA File for Each Protein**  
+- Downloads the FASTA files from NCBI according to each species, with all protein orthologs.
+- Downloads FASTA files into:
+  - A **grouped folder**, grouped by gene for BLAST.
+  - An **individual folder**, where they are not grouped, for tools like MEGA.
+- This takes quite long depending on your genes since many files need to be downloaded.
+
+#### **4. Creating the BLAST Databases**  
+- Organizes the FASTA files into BLAST-compatible databases.
+- These BLAST databases are critical for sequence comparison tasks, allowing you to run local BLAST searches.
+
+#### **5. Running BLAST Using One Query Species**  
+- Runs cross-species BLAST. The query species is chosen by typing it into the input box after running the cell. Keep in mind to use exact spelling and to replace any spaces with `_`.
+- Produces two CSV files:
+  - One where the chosen species was compared against itself. This is to check for any errors in the BLAST.
+  - Another showing the BLAST results where the query species was BLASTed against all other species in the dataset.
 
 ---
 
-### Step 4: Check the Output
-1. **Output Directory**:
-   - Results will be saved in the `cross_species_blast_results` directory.
+## **Output Explanation**
 
-2. **File Types**:
-   - **Gene-Specific Results**: A CSV file for each gene, summarizing BLAST results for all species. Results are organized in subdirectories by gene name. Example structure:
+### **1. Results Directory**
+- Results will be saved in the `cross_species_blast_results` directory.
+
+### **2. File Types**
+- **Gene-Specific Results**: A CSV file for each gene, summarizing BLAST results for all species. Results are organized in subdirectories by gene name. Example structure:
      ```
-     cross_species_blast_results/Gene_name/
+     blast_results_species_A_vs_all/Gene_name/
+     ├── Species_A_self_comparison.csv
      ├── Species_A_vs_all.csv
-     ├── Species_B_vs_all.csv
-     ├── Species_C_vs_all.csv
-     └── ...
      ```
      Example files for a gene `Ato (atonal)`:
      ```
-     cross_species_blast_results/Ato/
-     ├── Drosophila_melanogaster_vs_all.csv
-     ├── Drosophila_simulans_vs_all.csv
-     ├── Drosophila_yakuba_vs_all.csv
-     └── ...
+     blast_results_species_A_vs_all/Ato_(atonal)/
+     ├── Species_A_self_comparison.csv
+     ├── Species_A_vs_all.csv
      ```
      Each file summarizes BLASTp results for a specific species against all others in the dataset.
 
-   - **Master Results**: A consolidated CSV file containing all results across genes and species:
-     ```
-     cross_species_blast_results/master_blast_results.csv
-     ```
 
+### **3. CSV Contents**
+- **Columns**:
+- Gene Name
+- Query Species
+- Target Species
+- % Identity
+- Alignment Length
+- Bit Score
+- And other alignment statistics
 
-3. **CSV Contents**:
-   - Gene Name
-   - Query Species
-   - Target Species
-   - % Identity
-   - Alignment Length
-   - Bit Score
-   - And other alignment statistics
+---
+
+### **Notes**
+- Ensure accurate species and gene names to avoid mismatches.
+- Processing time varies depending on the dataset size. For larger datasets, use high-performance hardware.
 
