@@ -46,7 +46,7 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 6. **Required Libraries**: Ensure the following Python libraries are installed in your environment:
    - `os` (standard library, no installation required)
    - `time` (standard library, no installation required)
-   - `pandas`: Install using:
+   - `pandas`: Install on the VS code bash terminal using:
      ```bash
      pip install pandas
      ```
