@@ -26,8 +26,14 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 2. **Install Anaconda**:
    - Download and install [Anaconda](https://www.anaconda.com/products/individual) (which includes Python and package management tools).
    - After installation, open the bash terminal in VS code.
-
-3. **Create a Python Environment**:
+     
+4. **Importing github directory**
+   - Open the "Explorer" tab and click on "Clone Repository".
+   - Paste the repository URL
+     ```
+     https://github.com/bertiebertolo/Auto_BLASTp.git
+     
+5. **Create a Python Environment**:
    - Create a new conda environment for this project. Run the following command in the Jupyter Terminal:
    - Activate Anaconda:
      ```bash
@@ -37,13 +43,9 @@ This repository contains the code to perform BLASTp analysis across multiple spe
      ```bash
      conda activate blastp_env
      ```
-4. **Importing github directory
-   - Open the "Explorer" tab and click on "Clone Repository".
-   - Paste the repository URL
+
      ```
-     https://github.com/bertiebertolo/Auto_BLASTp.git
-     ```
-4. **Required Libraries**: Ensure the following Python libraries are installed in your environment:
+6. **Required Libraries**: Ensure the following Python libraries are installed in your environment:
    - `os` (standard library, no installation required)
    - `time` (standard library, no installation required)
    - `pandas`: Install using:
@@ -56,19 +58,19 @@ This repository contains the code to perform BLASTp analysis across multiple spe
      pip install biopython
      ```
 
-5. **BLAST+ Suite**:
+7. **BLAST+ Suite**:
    - Download the BLAST+ toolkit (version `2.16.0+`) from [NCBI](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download).
    - Extract the downloaded archive. The extracted folder will be named `ncbi-blast-2.16.0+`.
    - Move the entire `ncbi-blast-2.16.0+` folder into the main project directory "Auto_BLASTp", where all other files (e.g., input Excel/CSV files, Jupyter notebooks) are located.
 
-6. **Verify Installation**:
+8. **Verify Installation**:
    - Ensure BLAST is correctly installed by running:
      ```bash
      ncbi-blast-2.16.0+/bin/blastp -version
      ```
    - If successful, you will see the version information for BLAST.
 
-7. **Optional: Update PATH**:
+9. **Optional: Update PATH**:
    - If you prefer not to keep the BLAST folder in the project directory, you can add the `ncbi-blast-2.16.0+/bin` directory to your system's PATH environment variable. This will allow BLAST commands to be executed from any location.
 
 
