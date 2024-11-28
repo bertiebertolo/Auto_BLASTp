@@ -17,6 +17,10 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 
 ### **Prerequisites**
 
+7. **Recommended: Use Jupyter Notebook**:
+   - For better interactivity and visualization, it is highly recommended to run this project in Jupyter Notebook. If you want to see how to set up a Jupyter Notebook in Microsoft Visual Studio Code, please [click here](path/to/your/guide/file).
+
+
 1. **Install Anaconda**:
    - Download and install [Anaconda](https://www.anaconda.com/products/individual) (which includes Python and package management tools).
    - After installation, open the Anaconda Prompt (Windows) or terminal (macOS/Linux).
@@ -58,10 +62,6 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 
 6. **Optional: Update PATH**:
    - If you prefer not to keep the BLAST folder in the project directory, you can add the `ncbi-blast-2.16.0+/bin` directory to your system's PATH environment variable. This will allow BLAST commands to be executed from any location.
-
-7. **Recommended: Use Jupyter Notebook**:
-   - For better interactivity and visualization, it is highly recommended to run this project in Jupyter Notebook, if you want to see how to set up a jupyter notebook in Microsoft Visual code please click here 
-
 
 
 ### **Folder Structure**
