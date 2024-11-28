@@ -27,7 +27,7 @@ This repository contains the code to perform BLASTp analysis across multiple spe
    - Click on the "Explorer" Tab and click on "Clone Repository".
    - In the repository name paste this link
      ```
-
+      https://github.com/bertiebertolo/Auto_BLASTp.git
      ```
 
 2. **Install Anaconda**:
