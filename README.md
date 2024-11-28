@@ -17,16 +17,17 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 
 ### **Prerequisites**
 
-7. **Recommended: Use Jupyter Notebook**:
-   - For better interactivity and visualization, it is highly recommended to run this project in Jupyter Notebook. If you want to see how to set up a Jupyter Notebook in Microsoft Visual Studio Code, please [click here](Jupyter_guide.md).
+1. **Recommended: Use Jupyter Notebook on Microsoft Visual Code**:
+   - For better interactivity and visualization, it is highly recommended to run this project in Jupyter Notebook.
+   - Download and Install [VS Code](https://code.visualstudio.com/download) (follow the instructions and download based on operating system and open VS code)
+   - Next open the extensions tab![Alt Text](path/to/your/image)
 
-
-1. **Install Anaconda**:
+2. **Install Anaconda**:
    - Download and install [Anaconda](https://www.anaconda.com/products/individual) (which includes Python and package management tools).
    - After installation, open the Anaconda Prompt (Windows) or terminal (macOS/Linux).
 
-2. **Create a Python Environment**:
-   - Create a new conda environment for this project. Run the following command in the Anaconda Prompt or terminal:
+3. **Create a Python Environment**:
+   - Create a new conda environment for this project. Run the following command in the Jupyter Terminal:
      ```bash
      conda create --name blastp_env python=3.8
      ```
@@ -35,7 +36,7 @@ This repository contains the code to perform BLASTp analysis across multiple spe
      conda activate blastp_env
      ```
 
-3. **Required Libraries**: Ensure the following Python libraries are installed in your environment:
+4. **Required Libraries**: Ensure the following Python libraries are installed in your environment:
    - `os` (standard library, no installation required)
    - `time` (standard library, no installation required)
    - `pandas`: Install using:
@@ -48,19 +49,19 @@ This repository contains the code to perform BLASTp analysis across multiple spe
      pip install biopython
      ```
 
-4. **BLAST+ Suite**:
+5. **BLAST+ Suite**:
    - Download the BLAST+ toolkit (version `2.16.0+`) from [NCBI](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download).
    - Extract the downloaded archive. The extracted folder will be named `ncbi-blast-2.16.0+`.
    - Move the entire `ncbi-blast-2.16.0+` folder into the main project directory, where all other files (e.g., input Excel/CSV files, Jupyter notebooks) are located.
 
-5. **Verify Installation**:
+6. **Verify Installation**:
    - Ensure BLAST is correctly installed by running:
      ```bash
      ncbi-blast-2.16.0+/bin/blastp -version
      ```
    - If successful, you will see the version information for BLAST.
 
-6. **Optional: Update PATH**:
+7. **Optional: Update PATH**:
    - If you prefer not to keep the BLAST folder in the project directory, you can add the `ncbi-blast-2.16.0+/bin` directory to your system's PATH environment variable. This will allow BLAST commands to be executed from any location.
 
 
