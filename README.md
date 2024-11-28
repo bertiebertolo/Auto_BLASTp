@@ -124,8 +124,7 @@ Auto_BLASTp/
 - Downloads the FASTA files from NCBI according to each species, with all protein orthologs.
 - Downloads FASTA files into:
   - A **grouped folder**, grouped by gene for BLAST.
-  - An **individual folder**, where they are not grouped, for tools like MEGA.
-- This takes quite long depending on your genes since many files need to be downloaded.
+  - An **individual folder**, this is a folder with all the FASTA files ungrouped.
 
 #### **4. Creating the BLAST Databases**  
 - Organizes the FASTA files into BLAST-compatible databases.
