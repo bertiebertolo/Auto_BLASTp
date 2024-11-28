@@ -18,7 +18,7 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 ### **Prerequisites**
 
 7. **Recommended: Use Jupyter Notebook**:
-   - For better interactivity and visualization, it is highly recommended to run this project in Jupyter Notebook. If you want to see how to set up a Jupyter Notebook in Microsoft Visual Studio Code, please [click here](path/to/your/guide/file).
+   - For better interactivity and visualization, it is highly recommended to run this project in Jupyter Notebook. If you want to see how to set up a Jupyter Notebook in Microsoft Visual Studio Code, please [click here](Jupyter_guide.md).
 
 
 1. **Install Anaconda**:
