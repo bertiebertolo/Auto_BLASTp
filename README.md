@@ -86,6 +86,7 @@ Auto_BLASTp/
 │   └── README               # BLAST+ documentation
 ├── Gene_data.xlsx  # Input file with gene names and IDs (this can be changed accordingly)
 ├── BLAST_Analysis.ipynb     # Jupyter notebook for running the analysis
+├── README.md                #This markdown File
 ```
 
 ---
