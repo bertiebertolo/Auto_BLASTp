@@ -29,6 +29,7 @@ This repository contains the code to perform BLASTp analysis across multiple spe
      ```
       https://github.com/bertiebertolo/Auto_BLASTp.git
      ```
+   -Save the Repository into a new Folder
 
 2. **Install Anaconda**:
    - Download and install [Anaconda](https://www.anaconda.com/products/individual) (which includes Python and package management tools).
