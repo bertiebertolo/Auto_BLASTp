@@ -23,14 +23,6 @@ This repository contains the code to perform BLASTp analysis across multiple spe
    - Next open the "Extension"s tab and Install the "Python" and Jupyter "Extensions".
    - Also is is recommended to install the extensions "Excel Viewer" and "Rainbow CSV" for easy results viewing.
 
-2. **Opening the git repository**
-   - Click on the "Explorer" Tab and click on "Clone Repository".
-   - In the repository name paste this link
-     ```
-      https://github.com/bertiebertolo/Auto_BLASTp.git
-     ```
-   -Save the Repository into a new Folder
-
 2. **Install Anaconda**:
    - Download and install [Anaconda](https://www.anaconda.com/products/individual) (which includes Python and package management tools).
    - After installation, open the bash terminal in VS code.
@@ -67,7 +59,7 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 5. **BLAST+ Suite**:
    - Download the BLAST+ toolkit (version `2.16.0+`) from [NCBI](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download).
    - Extract the downloaded archive. The extracted folder will be named `ncbi-blast-2.16.0+`.
-   - Move the entire `ncbi-blast-2.16.0+` folder into the main project directory, where all other files (e.g., input Excel/CSV files, Jupyter notebooks) are located.
+   - Move the entire `ncbi-blast-2.16.0+` folder into the main project directory "Auto_BLASTp", where all other files (e.g., input Excel/CSV files, Jupyter notebooks) are located.
 
 6. **Verify Installation**:
    - Ensure BLAST is correctly installed by running:
@@ -85,14 +77,14 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 Ensure the following structure for your project directory:
 
  ```
-project_folder/
+Auto_BLASTp/
 ├── ncbi-blast-2.16.0+/      # BLAST+ executable folder
 │   ├── bin/
 │   │   ├── blastp           # BLASTp executable
 │   │   ├── makeblastdb      # Database creation executable
 │   │   └── other BLAST tools
 │   └── README               # BLAST+ documentation
-├── Dros_gene_names_full.xlsx  # Input file with gene names and IDs (this can be changed accordingly)
+├── Gene_data.xlsx  # Input file with gene names and IDs (this can be changed accordingly)
 ├── BLAST_Analysis.ipynb     # Jupyter notebook for running the analysis
 ```
 
@@ -102,9 +94,9 @@ project_folder/
 
 ### **Step 1: Prepare Input Data**
 1. **Input File Format**:
-   - The input files must be in **Excel** format. CSV files can also be used, but the Pandas `read_excel` function in the code must be adjusted to `read_csv` accordingly.
-   - Update the file name in the code to match your input file. In this example, we used `Dros_gene_names_full.xlsx`.
-   - Each Excel file should contain gene-specific data, formatted as follows:
+   - You can manually paste the data in the excel "Gene_data.xlsx" file directly or alternatively upload your own Excel File (note make sure to change the file name in the code).
+   - CSV files can also be used but the read function in the code needs to be adjusted.
+   - The Excel file should contain gene-specific data, formatted as follows:
 
      | Gene Name       | Gene ID | Species       |
      |------------------|---------|---------------|
@@ -114,7 +106,7 @@ project_folder/
    - In some cases, the gene name can be used for the Gene ID (especially for *Drosophila melanogaster*), but we recommend using the Gene ID from the NCBI database to avoid errors.
    - Ensure the sheet name in the Excel file is set correctly. In this example, the sheet name is `Gene_names_ids`. If you use a different sheet name, update the code accordingly.
 
-2. **Organize Input Files**:
+3. **Organize Input Files**:
    - Place your Excel file in the same folder as the Jupyter notebook to ensure they are accessible during execution.
 
 ---
