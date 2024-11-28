@@ -46,6 +46,11 @@ This repository contains the code to perform BLASTp analysis across multiple spe
      conda activate blastp_env
      ```
 4. **Importing github directory
+   - Open the "Explorer" tab and click on "Clone Repository".
+   - Paste the repository URL
+     ```
+     https://github.com/bertiebertolo/Auto_BLASTp.git
+     ```
 4. **Required Libraries**: Ensure the following Python libraries are installed in your environment:
    - `os` (standard library, no installation required)
    - `time` (standard library, no installation required)
