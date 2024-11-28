@@ -34,7 +34,7 @@ This repository contains the code to perform BLASTp analysis across multiple spe
      
 5. **Create a Python Environment**:
    - Create a new conda environment for this project. Run the following command in the Jupyter Terminal:
-   - Activate Anaconda:
+   - Create the enviroment:
      ```bash
      conda create --name blastp_env python=3.10.15
      ```
@@ -42,7 +42,6 @@ This repository contains the code to perform BLASTp analysis across multiple spe
      ```bash
      conda activate blastp_env
      ```
-   - After this click select kernel on VS code and select the enviroment that you just created "blatsp_env" as your kernel.
 6. **Required Libraries**: Ensure the following Python libraries are installed in your environment:
    - `os` (standard library, no installation required)
    - `time` (standard library, no installation required)
@@ -55,7 +54,7 @@ This repository contains the code to perform BLASTp analysis across multiple spe
      ```bash
      pip install biopython
      ```
-
+   - After this click select kernel on VS code and select the enviroment that you just created "blatsp_env" as your kernel.
 7. **BLAST+ Suite**:
    - Download the BLAST+ toolkit (version `2.16.0+`) from [NCBI](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download).
    - Extract the downloaded archive. The extracted folder will be named `ncbi-blast-2.16.0+`.
