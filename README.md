@@ -13,24 +13,25 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 
 ---
 
-## **Overview**
-
-This project automates BLASTp (Protein BLAST) comparisons for genes across multiple species. The script is designed to:
-- Check if the genes to be analysed are available on the NCBI database.
-- Process protein FASTA files from a specified directory.
-- Create BLASTp databases dynamically from the FASTA files.
-- Perform BLASTp using the inputted species as the query and comparing it against all other species. 
-- Generate CSV files summarizing results, including alignment statistics such as percentage identity, bit score, and alignment length.
-
-The primary objective is to streamline and automate the process of comparing gene homologs across species, ensuring a reproducible and scalable pipeline.
-
----
-
 ## **Setup Instructions**
 
 ### **Prerequisites**
 
-1. **Required Libraries**: Ensure the following Python libraries are installed:
+1. **Install Anaconda**:
+   - Download and install [Anaconda](https://www.anaconda.com/products/individual) (which includes Python and package management tools).
+   - After installation, open the Anaconda Prompt (Windows) or terminal (macOS/Linux).
+
+2. **Create a Python Environment**:
+   - Create a new conda environment for this project. Run the following command in the Anaconda Prompt or terminal:
+     ```bash
+     conda create --name blastp_env python=3.8
+     ```
+   - Activate the environment:
+     ```bash
+     conda activate blastp_env
+     ```
+
+3. **Required Libraries**: Ensure the following Python libraries are installed in your environment:
    - `os` (standard library, no installation required)
    - `time` (standard library, no installation required)
    - `pandas`: Install using:
@@ -43,22 +44,21 @@ The primary objective is to streamline and automate the process of comparing gen
      pip install biopython
      ```
 
-2. **BLAST+ Suite**:
+4. **BLAST+ Suite**:
    - Download the BLAST+ toolkit (version `2.16.0+`) from [NCBI](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download).
    - Extract the downloaded archive. The extracted folder will be named `ncbi-blast-2.16.0+`.
    - Move the entire `ncbi-blast-2.16.0+` folder into the main project directory, where all other files (e.g., input Excel/CSV files, Jupyter notebooks) are located.
 
-3. **Verify Installation**:
+5. **Verify Installation**:
    - Ensure BLAST is correctly installed by running:
      ```bash
      ncbi-blast-2.16.0+/bin/blastp -version
      ```
    - If successful, you will see the version information for BLAST.
 
-4. **Optional: Update PATH**:
+6. **Optional: Update PATH**:
    - If you prefer not to keep the BLAST folder in the project directory, you can add the `ncbi-blast-2.16.0+/bin` directory to your system's PATH environment variable. This will allow BLAST commands to be executed from any location.
 
----
 
 ### **Folder Structure**
 
