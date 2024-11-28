@@ -25,7 +25,6 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 
 2. **Install Anaconda**:
    - Download and install [Anaconda](https://www.anaconda.com/products/individual) (which includes Python and package management tools).
-   - After installation, open the bash terminal in VS code.
      
 4. **Importing github directory**
    - Open the "Explorer" tab and click on "Clone Repository".
@@ -37,14 +36,13 @@ This repository contains the code to perform BLASTp analysis across multiple spe
    - Create a new conda environment for this project. Run the following command in the Jupyter Terminal:
    - Activate Anaconda:
      ```bash
-     conda create --name blastp_env python=3.8
+     conda create --name blastp_env python=3.10.15
      ```
    - Activate the environment:
      ```bash
      conda activate blastp_env
      ```
-
-     ```
+   - After this click select kernel on VS code and select the enviroment that you just created "blatsp_env" as your kernel.
 6. **Required Libraries**: Ensure the following Python libraries are installed in your environment:
    - `os` (standard library, no installation required)
    - `time` (standard library, no installation required)
