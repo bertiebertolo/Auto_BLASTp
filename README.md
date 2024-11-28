@@ -59,6 +59,14 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 6. **Optional: Update PATH**:
    - If you prefer not to keep the BLAST folder in the project directory, you can add the `ncbi-blast-2.16.0+/bin` directory to your system's PATH environment variable. This will allow BLAST commands to be executed from any location.
 
+7. **Recommended: Use Jupyter Notebook**:
+   - For better interactivity and visualization, it is highly recommended to run this project in Jupyter Notebook. You can launch it by running:
+     ```bash
+     jupyter notebook
+     ```
+   - This will open a web interface where you can run your Python code interactively and view results such as the BLASTp output and CSV summaries.
+
+
 
 ### **Folder Structure**
 
