@@ -20,16 +20,16 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 1. **Recommended: Use Jupyter Notebook on Microsoft Visual Code**:
    - For better interactivity and visualization, it is highly recommended to run this project in Jupyter Notebook.
    - Download and Install [VS Code](https://code.visualstudio.com/download) (follow the instructions and download based on operating system and open VS code)
-   - Next open the extensions tab![Extensions](/images/extension_guide.png)
-   - Install and download Python extension ![Python_click](/Auto_BLASTp/images/Python_click.png)
-   - Installa and downlaod Jupyter extension ![Extensions](/Auto_BLASTp/images/Jupyter_click.png)
+   - Next open the extensions tab and Install the Python and Jupyter Extensions.
+   - Create a new Jupyter notebook file.
 
 2. **Install Anaconda**:
    - Download and install [Anaconda](https://www.anaconda.com/products/individual) (which includes Python and package management tools).
-   - After installation, open the Anaconda Prompt (Windows) or terminal (macOS/Linux).
+   - After installation, open the bash terminal in VS code.
 
 3. **Create a Python Environment**:
    - Create a new conda environment for this project. Run the following command in the Jupyter Terminal:
+   - Activate Anaconda:
      ```bash
      conda create --name blastp_env python=3.8
      ```
