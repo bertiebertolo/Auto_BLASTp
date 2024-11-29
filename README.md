@@ -20,8 +20,8 @@ This repository contains the code to perform BLASTp analysis across multiple spe
 1. **Recommended: Use Jupyter Notebook on Microsoft Visual Code**:
    - For better interactivity and visualization, it is highly recommended to run this project in Jupyter Notebook.
    - Download and Install [VS Code](https://code.visualstudio.com/download) (follow the instructions and download based on operating system and open VS code)
-   - Next open the "Extension"s tab and Install the "Python" and Jupyter "Extensions".
-   - Also is is recommended to install the extensions "Excel Viewer" and "Rainbow CSV" for easy results viewing.
+   - Next open the "Extension"s tab and Install the "Python" and "Jupyter" Extensions.
+   - Also it is recommended to install the extensions "Excel Viewer" and "Rainbow CSV" for easy results viewing.
 
 2. **Install Anaconda**:
    - Download and install [Anaconda](https://www.anaconda.com/products/individual) (which includes Python and package management tools).
