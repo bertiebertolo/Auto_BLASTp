@@ -37,6 +37,7 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
 
 2. **Install Anaconda**:
    - Download and install [Anaconda](https://www.anaconda.com/products/individual) (which includes Python and package management tools).
+   - Open Anaconda Navigator to verify the installation.
      
 4. **Importing github directory**
    - Open the "Explorer" tab and click on "Clone Repository".
@@ -45,8 +46,8 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
      https://github.com/bertiebertolo/Auto_BLASTp.git
      
 5. **Create a Python Environment**:
-   - Create a new conda environment for this project. Run the following command in the Jupyter Terminal:
-   - Create the enviroment:
+   - Create a new conda environment for this project. Run the following command in the VS code Terminal, this can be done by selecting "View > Terminal" from the menu bar:
+   - Create the enviroment by copying and pasting this:
      ```bash
      conda create --name blastp_env python=3.10.15
      ```
@@ -54,7 +55,7 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
      ```bash
      conda activate blastp_env
      ```
-6. **Required Libraries**: Ensure the following Python libraries are installed in your environment:
+6. **Required Libraries**: Ensure the following Python libraries are installed in your environment, if none are installed paste the commands of all below:
    - `os` (standard library, no installation required)
    - `time` (standard library, no installation required)
    - `pandas`: Install on the VS code bash terminal using:
@@ -73,7 +74,7 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
    - Move the entire `ncbi-blast-2.16.0+` folder into the main project directory "Auto_BLASTp", where all other files (e.g., input Excel/CSV files, Jupyter notebooks) are located.
 
 8. **Verify Installation**:
-   - Ensure BLAST is correctly installed by running:
+   - Ensure BLAST is correctly installed by running in the terminal:
      ```bash
      ncbi-blast-2.16.0+/bin/blastp -version
      ```
@@ -106,7 +107,7 @@ Auto_BLASTp/
 
 ### **Step 1: Prepare Input Data**
 1. **Input File Format**:
-   - You can manually paste the data in the excel "Gene_data.xlsx" file directly or alternatively upload your own Excel File (note make sure to change the file name in the code).
+   - You can manually paste the data in the excel "Gene_data.xlsx" file directly or alternatively upload your own Excel File (note make sure to change the file name in the code) or use the same file name as this just make sure the format is the same.
    - CSV files can also be used but the read function in the code needs to be adjusted.
    - The Excel file should contain gene-specific data, formatted as follows:
 
@@ -127,6 +128,7 @@ Auto_BLASTp/
 
 #### **1. Verifying All Libraries**  
 - This cell just verifies that all libraries needed are installed and working properly.
+- If there are any problems please refer back to the [Setup Instructions](#setup-instructions).
 
 #### **2. Checking That Gene IDs Are Correct**  
 - Reads the gene names and IDs from the specified Excel file and checks if they exist on the NCBI site.
