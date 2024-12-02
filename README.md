@@ -17,12 +17,11 @@
 This repository automates cross-species BLASTp analysis for gene-specific datasets. The goal is to streamline and accelerate the process of querying protein sequences across multiple species, generating results in CSV format for easy comparison. By leveraging BLASTp and integrating it with Python scripting, this tool replaces the manual use of BLAST software, making large-scale analyses faster and more efficient. It is particularly useful for researchers conducting comparative genomics, functional annotation, or evolutionary studies across different species.
 
 **Key Features:**
-
--Automates the BLASTp querying process for multiple species.
--Generates CSV output for cross-species protein comparisons.
--Reduces manual intervention, improving efficiency.
--Compatible with Jupyter Notebook for interactive usage.
--This tool is ideal for anyone needing to perform cross-species protein analysis on gene datasets, simplifying the workflow and reducing computational overhead.
+   - Automates the BLASTp querying process for multiple species.
+   - Generates CSV output for cross-species protein comparisons.
+   - Reduces manual intervention, improving efficiency.
+   - Compatible with Jupyter Notebook for interactive usage.
+   - This tool is ideal for anyone needing to perform cross-species protein analysis on gene datasets, simplifying the workflow and reducing computational overhead.
 
 ---
 
