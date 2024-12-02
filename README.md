@@ -139,6 +139,7 @@ Auto_BLASTp/
 - Downloads FASTA files into:
   - A **grouped folder**, grouped by gene for BLAST.
   - An **individual folder**, this is a folder with all the FASTA files ungrouped.
+- This step takes quite a long time especially if dealing with a lot of protein sequences.
 
 #### **4. Creating the BLAST Databases**  
 - Organizes the FASTA files into BLAST-compatible databases.
