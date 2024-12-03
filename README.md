@@ -126,7 +126,7 @@ Auto_BLASTp/
 
 ### **Step 2: Run the Script**
 
-   -Before running your script please replace your e-mail in any spaces saying "youremail@example.com" this will be necessary for the entrez search
+Before running your script please replace your e-mail in any spaces saying "youremail@example.com" this will be necessary for the entrez search
 
 #### **1. Verifying All Libraries**  
 - This cell just verifies that all libraries needed are installed and working properly.
