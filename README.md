@@ -67,9 +67,9 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
      ```bash
      conda install biopython
      ```
-   - `Openxyl: Install using:
+   - `Openpyxl`: Install using:
      ```bash
-     conda install openxyl
+      conda install openpyxl
      ```
    - After this click select kernel on VS code and select the enviroment that you just created "blatsp_env" as your kernel.
 7. **BLAST+ Suite**:
