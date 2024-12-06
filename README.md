@@ -71,6 +71,10 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
      ```bash
       conda install openpyxl
      ```
+   - `jupyter`: Install using:
+     ```bash
+      conda install jupyter
+     ```
    - After this click select kernel on VS code and select the enviroment that you just created "blatsp_env" as your kernel.
 7. **BLAST+ Suite**:
    - Download the BLAST+ toolkit (version `2.16.0+`) from [NCBI](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download).
