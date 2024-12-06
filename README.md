@@ -60,18 +60,24 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
    - `time` (standard library, no installation required)
    - `pandas`: Install on the VS code bash terminal using:
      ```bash
-     pip install pandas
+     conda install pandas
      ```
    - `subprocess` (standard library, no installation required)
    - `Bio` (from Biopython): Install using:
      ```bash
-     pip install biopython
+     conda install biopython
+     ```
+   - `Openxyl: Install using:
+     ```bash
+     conda install openxyl
      ```
    - After this click select kernel on VS code and select the enviroment that you just created "blatsp_env" as your kernel.
 7. **BLAST+ Suite**:
    - Download the BLAST+ toolkit (version `2.16.0+`) from [NCBI](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download).
    - Extract the downloaded archive. The extracted folder will be named `ncbi-blast-2.16.0+`.
    - Move the entire `ncbi-blast-2.16.0+` folder into the main project directory "Auto_BLASTp", where all other files (e.g., input Excel/CSV files, Jupyter notebooks) are located.
+   - To verify that it installed correctly, navigate to the `bin` directory within `ncbi-blast-2.16.0+` and launch `blastp`.
+   - Because blastp is not a licensed application, your computer’s security settings may flag it as untrusted. You may need to grant permission for it to run.
 
 8. **Verify Installation**:
    - Ensure BLAST is correctly installed by running in the terminal:
