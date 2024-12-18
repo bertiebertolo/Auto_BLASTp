@@ -32,7 +32,7 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
 1. **Recommended: Use Jupyter Notebook on Microsoft Visual Code**:
    - For better interactivity and visualization, it is highly recommended to run this project in Jupyter Notebook.
    - Download and Install <a href="https://code.visualstudio.com/download" target="_blank">VS Code</a> (follow the instructions and download based on operating system and open VS code)
-   - Next open the "Extension"s tab and Install the "Python" and "Jupyter" Extensions.
+   - Next open the "Extension"s tab and Install the "Python", "Jupyter" and "GitHub Repositories" Extensions.
    - Also it is recommended to install the extensions "Excel Viewer" and "Rainbow CSV" for easy results viewing.
 
 2. **Install Anaconda**:
