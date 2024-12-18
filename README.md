@@ -31,12 +31,12 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
 
 1. **Recommended: Use Jupyter Notebook on Microsoft Visual Code**:
    - For better interactivity and visualization, it is highly recommended to run this project in Jupyter Notebook.
-   - Download and Install [VS Code](https://code.visualstudio.com/download) (follow the instructions and download based on operating system and open VS code)
+   - Download and Install <a href="https://code.visualstudio.com/download" target="_blank">VS Code</a> (follow the instructions and download based on operating system and open VS code)
    - Next open the "Extension"s tab and Install the "Python" and "Jupyter" Extensions.
    - Also it is recommended to install the extensions "Excel Viewer" and "Rainbow CSV" for easy results viewing.
 
 2. **Install Anaconda**:
-   - Download and install [Anaconda](https://www.anaconda.com/products/individual) (which includes Python and package management tools).
+   - Download and install <a href="https://www.anaconda.com/products/individual" target="_blank">Anaconda</a> (which includes Python and package management tools).
    - Open Anaconda Navigator to verify the installation.
      
 4. **Importing github directory**
@@ -77,7 +77,7 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
      ```
    - After this click select kernel on VS code and select the enviroment that you just created "blatsp_env" as your kernel.
 7. **BLAST+ Suite**:
-   - Download the BLAST+ toolkit (version `2.16.0+`) from [NCBI](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download).
+   - Download the BLAST+ toolkit (version `2.16.0+`) from <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download" target="_blank">NCBI</a>.
    - Extract the downloaded archive. The extracted folder will be named `ncbi-blast-2.16.0+`.
    - Move the entire `ncbi-blast-2.16.0+` folder into the main project directory "Auto_BLASTp", where all other files (e.g., input Excel/CSV files, Jupyter notebooks) are located.
    - To verify that it installed correctly, navigate to the `bin` directory within `ncbi-blast-2.16.0+` and launch `blastp`.
