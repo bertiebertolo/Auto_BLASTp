@@ -37,8 +37,20 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
 
 2. **Install Anaconda**:
    - Download and install <a href="https://www.anaconda.com/products/individual" target="_blank">Anaconda</a> (which includes Python and package management tools).
-   - Open Anaconda Navigator to verify the installation.
-     
+   - Open Anaconda Navigator to verify the installation
+   - If your are using windows first open "Anaconda Prompt" from start and paste:
+     ```
+     conda --version
+     ```
+   - This should show the conda version showing successful installation next to activate conda in powershell paste:
+     ```
+     conda init powershell
+     ```
+   - After this close the anaconda pormpt and open the "Windows Powershell" from start then in the terminal paste:
+     ```
+     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+     ```
+   - Close and open Powershell and if successful you should see (base) in the terminal/
 4. **Importing github directory**
    - Open the "Explorer" tab and click on "Clone Repository".
    - Paste the repository URL
