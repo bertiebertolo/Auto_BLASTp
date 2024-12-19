@@ -56,6 +56,8 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
    - Paste the repository URL
      ```
      https://github.com/bertiebertolo/Auto_BLASTp.git
+     ```
+   - I recommend saving the Repository locally and reopening it in VS code.
      
 5. **Create a Python Environment**:
    - Create a new conda environment for this project. Run the following command in the VS code Terminal, this can be done by selecting "View > Terminal" from the menu bar:
