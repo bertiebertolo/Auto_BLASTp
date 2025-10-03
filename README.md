@@ -100,6 +100,10 @@ This repository automates cross-species BLASTp analysis for gene-specific datase
 8. **Verify Installation**:
    - Ensure BLAST is correctly installed by running in the terminal:
      ```bash
+     ncbi-blast-2.17.0+/bin/blastp -version
+     ```
+   - Or For 2.16.0
+     ```bash
      ncbi-blast-2.16.0+/bin/blastp -version
      ```
    - If successful, you will see the version information for BLAST.
